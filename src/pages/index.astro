@@ -1,0 +1,24 @@
+---
+import Header from "../components/Header.astro"
+import Sidebar from "../components/Sidebar.astro"
+import Thumbnail from "../components/Thumbnail.astro"
+import "../styles/global.css"
+import DELETE from "../assets/DELETE.webp"
+---
+<html>
+	<head>
+
+	</head>
+	<body>
+		<Header />
+		<div class="grid grid-cols-5 gap-4">
+			<div class="col-span-1">
+				<Sidebar />
+			</div>
+			<div class="col-span-4">
+				<Thumbnail image_path={DELETE} headline="Trump international meeting" summary="Known for blasting the news media and punishing outlets he doesn\'t agree with, Trump on Monday said: The media\'s been actually very fair, generally speaking, very fair." link="/"/>
+			</div>
+		</div>
+
+	</body>
+</html>
