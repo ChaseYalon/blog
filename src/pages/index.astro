@@ -1,24 +1,34 @@
 ---
-import Header from "../components/Header.astro"
-import Sidebar from "../components/Sidebar.astro"
-import Thumbnail from "../components/Thumbnail.astro"
-import "../styles/global.css"
-import DELETE from "../assets/DELETE.webp"
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Image from 'astro/components/Image.astro';
+import ATLANTIS from "../assets/atlantis.jpg";
 ---
-<html>
-	<head>
 
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<div class="grid grid-cols-5 gap-4">
-			<div class="col-span-1">
-				<Sidebar />
-			</div>
-			<div class="col-span-4">
-				<Thumbnail image_path={DELETE} headline="Trump international meeting" summary="Known for blasting the news media and punishing outlets he doesn\'t agree with, Trump on Monday said: The media\'s been actually very fair, generally speaking, very fair." link="/"/>
-			</div>
-		</div>
-
+		<main>
+			<h1>Hi THere!!!</h1>
+			<p>
+				My name is Chase Yalon, and this is my blog. It is where I write (rant) about all the shit I care about. I am into computers law and politics.
+			</p>
+			<p>Fast facts about me: </p>
+			<ul>
+				<li> I am 15 years old and a software in High School.</li>
+				<li> I am (perhaps obviously) very into programming and computer science. </li>
+				<li> I am a life scout in Scouting and will get eagle before I am a junior.</li>
+				<li> I have a little sister who is the exact opposite of me. </li>
+			</ul>
+			<Image src={ATLANTIS} alt="temp"/>
+			<p>Me in front of Space Shuttle Atlantis, Kennedy Space Center</p>
+		</main>
+		<Footer />
 	</body>
 </html>
